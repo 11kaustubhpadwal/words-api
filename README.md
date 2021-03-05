@@ -15,6 +15,7 @@ Note : The initial API call might take a longer time to respond because of Herok
 ### API Endpoints
 
 1. Method - POST
+
    URL - http://localhost:5000/api/words/add
    Request body - {"wordToAdd" : "anyword"}
    Content type - JSON
