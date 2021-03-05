@@ -2,6 +2,10 @@
 
 This repository contains the code for the REST API which performs some operations on words.
 
+The API has been hosted on Heroku. To directly make API calls to the hosted app use the URL prefix - https://words-api-task.herokuapp.com/
+
+Note : The initial API call might take a longer time to respond because of Heroku's sleep feature.
+
 ### Installation instructions
 
 1. Download this repository
