@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 
       await newWord.save();
 
-      res.json({ msg: `${newWord.word} has been added successfully.` });
+      res.json({ msg: `${newWord} has been added successfully.` });
     } else {
       res
         .status(400)

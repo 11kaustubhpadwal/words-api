@@ -13,6 +13,7 @@ app.use(express.json({ extended: false }));
 
 // API routes
 app.use("/api/words/add", require("./routes/addWords"));
+app.use("/api/words/remove", require("./routes/deleteWords"));
 
 const PORT = process.env.PORT || 5000;
 
