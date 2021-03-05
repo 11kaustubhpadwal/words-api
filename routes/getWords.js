@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Word = require("../models/Word");
 
-// Add any word
+// Get the number of appearances of a word
 router.get("/appearances/:wordToFind", async (req, res) => {
   const { wordToFind } = req.params;
 
@@ -20,6 +20,19 @@ router.get("/appearances/:wordToFind", async (req, res) => {
   } catch (error) {
     res.status(400).json({ msg: "An error occurred. Please try again." });
   }
+});
+
+// Get all distinct words
+router.get("/unique", (req, res) => {
+  Word.distinct("word", function (err, result) {
+    if (err) {
+      res.status(400).json({ msg: "An error occurred. Please try again." });
+    } else {
+      res.json({
+        uniqueWords: result,
+      });
+    }
+  });
 });
 
 module.exports = router;
